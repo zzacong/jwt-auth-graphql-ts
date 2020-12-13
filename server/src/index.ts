@@ -53,6 +53,7 @@ const startServer = async () => {
       return next()
     }
 
+    console.log('refreshing token')
     const newTokens = createTokens(user)
 
     res.cookie('refresh-token', newTokens.refreshToken, {
